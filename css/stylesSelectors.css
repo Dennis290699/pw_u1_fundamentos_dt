@@ -34,3 +34,15 @@ img[alt="No2"] {
     width: 80px;
     height: 50px;
 }
+
+img[alt="uce"] {
+    width: 80px;
+    height: 50px;
+}
+
+/* Selector Universal */
+
+* {
+    margin: 0;
+    padding: 0;
+}
