@@ -1,0 +1,36 @@
+/* Selector por clase */
+.titulos {
+    color: red;
+    font-size: 30px;
+    background: blue;
+}
+
+/* selector por id */
+#id_titulo {
+    color: black;
+    background: red;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* selector pseudo-clase */
+i:hover {
+    color: blue;
+    font-size: 50px;
+}
+
+input:focus {
+    border-color: rgb(173, 102, 240);
+    background: rgba(18, 185, 227, 0.115);
+    transition: all .5s ease-in;
+}
+
+/* Selector por atributo */
+[id] {
+    color: brown;
+    font-size: 40px;
+}
+
+img[alt="No2"] {
+    width: 80px;
+    height: 50px;
+}
