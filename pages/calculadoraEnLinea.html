@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora en linea</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+
+    <nav>
+
+    </nav>
+
+    <section>
+        <label for="id_n_1" id="id_label_1">Numero 1</label>
+        <input type="number" id="id_n_1">
+
+        <label for="id_n_2" id="id_label_2">Numero 2</label>
+        <input type="number" id="id_n_2">
+
+        <button onclick="document.getElementById('id_label_1').style.color = 'red'">Cambiar color</button>
+        <button onclick="document.getElementById('id_label_2').innerText ='Numero 2'">Cambiar texto</button>
+        <button onclick="document.getElementById('id_label_1').style.fontSize = '50px'">Cambiar tamaño</button>
+
+        <h1 id="id_h1"></h1>
+        <button
+            onclick="document.getElementById('id_h1').innerHTML = document.getElementById('id_label_1').innerText + document.getElementById('id_label_2').innerText">Concatenar</button>
+    </section>
+
+    <aside>
+
+    </aside>
+
+    <footer>
+
+    </footer>
+
+</body>
+
+</html>
