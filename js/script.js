@@ -25,15 +25,15 @@ function evaluarOperacion(tipo) {
     let resultado = 0;
 
     if (tipo === '+') {
-        return resultado =sumar(n1, n2);
+        resultado = sumar(n1, n2);
     } else if (tipo === '-') {
-        return resultado = restar(n1, n2);
+        resultado = restar(n1, n2);
     } else if (tipo === '*') {
-        return resultado = multiplicar(n1, n2);
+        resultado = multiplicar(n1, n2);
     } else if (tipo === '/') {
-        return resultado =dividir(n1, n2);
+        resultado = dividir(n1, n2);
     }
-    document.getElementById('id_resultado').innerText = resultado;
+    document.getElementById('id_resultado').innerText = "Resultado: " + resultado;
 }
 
 function sumar(n1, n2) {
@@ -49,5 +49,5 @@ function multiplicar(n1, n2) {
 }
 
 function dividir(n1, n2) {
-    return n1 / n2;
+    return n2 !== 0 ? n1 / n2 : "Error: división por 0";
 }
