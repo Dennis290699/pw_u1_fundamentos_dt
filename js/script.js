@@ -51,3 +51,120 @@ function multiplicar(n1, n2) {
 function dividir(n1, n2) {
     return n2 !== 0 ? n1 / n2 : "Error: división por 0";
 }
+
+function fundamentosJS() {
+    // tipos de variables
+    // var, let TIPO VARIABLE
+    var nombre = "Dennis"; //OBSOLETA YA ES ANTIGUA VARIABLE CAMBIANTE Y DINAMICA
+    let apellido = "Trujillo"; //VARIABLES CAMBIANTES Y DINAMICA
+    let apellido2 = 15; 
+    apellido2 = "Teran";
+    let arreglo = [1, 2, 3, 4, 5, 6];
+    let diaSemana = ['Lunes', 'Martes', '...'];
+
+    // TIPO CONSTANTE NO CAMBIANTE
+    const IVA = 12.8; 
+    console.log("Fundamentos de JS");
+    console.log(nombre);
+    console.log(IVA);
+    console.log(arreglo);
+
+    // ARREGLOS
+
+    const arreglosDiasSemanas = ['Lunes', 'Martes', 'Miercoles'];
+    arreglosDiasSemanas.push('Nuevo dia');
+    console.log(arreglosDiasSemanas);
+
+    arreglosDiasSemanas.unshift('Domingo');
+    console.log(arreglosDiasSemanas);
+    console.log(arreglosDiasSemanas[0]);
+
+    console.log('Manejo de nulos, undefined y vacio');
+
+    arreglosDiasSemanas.push(null);
+    arreglosDiasSemanas.push('');
+    console.log(arreglosDiasSemanas[5]);
+    console.log(arreglosDiasSemanas[6]);
+    console.log(arreglosDiasSemanas[7]);
+
+    const numerosPares = [2, 4, 6, 8, 10];
+    const numerosImpares = [1, 3, 5, 7, 9];
+
+    const numerosTotales = numerosImpares.concat(numerosPares);
+    console.log(numerosTotales);
+
+    // SENTENCIAS DE CONTROL
+    let edad = 19;
+    if (edad >= 18) {
+        console.log("Es mayor de edad");
+    } else {
+        console.log("Es menor de edad");
+    }
+
+    // SWITCH
+    let dia = 'Lunes';
+    switch (dia) {
+        case 'Lunes':
+            console.log('Es lunes');
+            break;
+        case 'Martes':
+            console.log('Es Martes');
+            break;
+        default:
+            console.log('No es lunes ni Martes');
+            break;
+    }
+
+    // BUCLES
+
+    // TRADICIONAL
+    for (let i = 0; i <= 5; i++) {
+        console.log(i);
+    }
+
+    // ITERA SOBRE UN ARREGLO
+    const frutas = ['Manzana', 'Sandia', 'Papaya', 'Naranja'];
+    for (let fruta of frutas) {
+        console.log(fruta);
+    }
+
+    // MANEJO DE OBJETOS
+
+    const profesor = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+
+    console.log(profesor);
+
+    console.log(profesor.nombre);
+
+    profesor.apellido = 'Teran';
+    console.log(profesor);
+
+    // COMPARADORES
+
+    if(profesor.ciudad === 'Quito') {
+        console.log('Es quiteño');
+    } else {
+        console.log('No es quiteño');
+        
+    }
+
+    if(profesor.edad !== 36) {
+        console.log('Es diferente de 36');
+    } else {
+        console.log('Es igual a 36');
+    }
+
+    // ITERAR POR ATRIBUTOS DE UN OBJETO
+
+    for (let clave in profesor) {
+        console.log(clave);
+        console.log(profesor[clave]);
+    }
+}
