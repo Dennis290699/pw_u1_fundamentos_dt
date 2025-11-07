@@ -57,13 +57,13 @@ function fundamentosJS() {
     // var, let TIPO VARIABLE
     var nombre = "Dennis"; //OBSOLETA YA ES ANTIGUA VARIABLE CAMBIANTE Y DINAMICA
     let apellido = "Trujillo"; //VARIABLES CAMBIANTES Y DINAMICA
-    let apellido2 = 15; 
+    let apellido2 = 15;
     apellido2 = "Teran";
     let arreglo = [1, 2, 3, 4, 5, 6];
     let diaSemana = ['Lunes', 'Martes', '...'];
 
     // TIPO CONSTANTE NO CAMBIANTE
-    const IVA = 12.8; 
+    const IVA = 12.8;
     console.log("Fundamentos de JS");
     console.log(nombre);
     console.log(IVA);
@@ -148,14 +148,14 @@ function fundamentosJS() {
 
     // COMPARADORES
 
-    if(profesor.ciudad === 'Quito') {
+    if (profesor.ciudad === 'Quito') {
         console.log('Es quiteño');
     } else {
         console.log('No es quiteño');
-        
+
     }
 
-    if(profesor.edad !== 36) {
+    if (profesor.edad !== 36) {
         console.log('Es diferente de 36');
     } else {
         console.log('Es igual a 36');
@@ -167,4 +167,106 @@ function fundamentosJS() {
         console.log(clave);
         console.log(profesor[clave]);
     }
+
+    // ARREGLOS DE OBJETOS
+
+    const estudiantes = {
+        nombre: 'Edison',
+        apellido: 'Cayambe',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+
+    const estudiantes2 = {
+        nombre: 'Dennis',
+        apellido: 'Trujillo',
+        edad: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito'
+    };
+
+    const arregloEstudiantes = [estudiantes, estudiantes2,
+        {
+            nombre: 'Dennis',
+            apellido: 'Trujillo',
+            edad: 35,
+            ecuatoriano: true,
+            genero: 'M',
+            ciudad: 'Quito'
+        },
+        {
+
+        }
+    ];
+    console.log(arregloEstudiantes[0]);
+    console.log(arregloEstudiantes[1]);
+    console.log(arregloEstudiantes[2]);
+    console.log(arregloEstudiantes[3]);
+
+    // DESESTRUCTURACION
+
+    //ARREGLOS
+    const arr1 = [1, 2, 3, 4, 5, 6, 7];
+
+    const [a, b, c, d, e] = arr1;
+    console.log(a);
+    console.log(b);
+    console.log(c);
+    console.log(d);
+    console.log(e);
+
+    const [primero, , , , , , ultimo] = arr1;
+    console.log(primero);
+    console.log(ultimo);
+
+    const [pos1, pos2] = [1, 2, 3, 4, 5];
+    imprime(arr1)
+
+    // OBJETOS
+        const estudiantes3 = {
+        nombre1: 'Dennis',
+        apellido1: 'Trujillo',
+        edad1: 35,
+        ecuatoriano: true,
+        genero: 'M',
+        ciudad: 'Quito',
+        direccion: {
+            calle: 'Av. America',
+            barrio: 'La Gasca',
+            numeracion: '1234'
+        }
+    };
+
+    console.log(estudiantes3.direccion);
+    console.log(estudiantes3.direccion.calle);
+
+    const {edad1:ed, direccion} = estudiantes3;
+    console.log(ed);
+    console.log(direccion);
+
+    const{calle} = direccion;
+    console.log(calle);
+
+    const {direccion: {barrio, calle: c1, numeracion}} = estudiantes3;
+    console.log(barrio);
+    console.log(c1);
+    console.log(numeracion);
+
+    const {
+        nombre1,
+        apellido1,
+        edad1
+    } = estudiantes3;
+    console.log(nombre1);
+    console.log(apellido1);
+    console.log(edad1);
+}
+
+function imprime([a, b, c]) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
 }
