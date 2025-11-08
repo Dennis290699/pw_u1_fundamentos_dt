@@ -4,48 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="../css/calculadoraFinal.css">
-    <script src="../js/calculadoraFinal.js"></script>
 
     <title>Calculadora Final</title>
 </head>
 
 <body>
     <div class="container">
-        <header>Calculadora</header>
+        <header>
+            <h1>Calculadora</h1>
+            <p>Proyecto académico - Octavo semestre</p>
+            <p><strong>Cátedra:</strong> Programación Web</p>
+        </header>
 
-        <nav>Barra de navegacion</nav>
+        <nav></nav>
 
         <section>
             <div id="calculadora">
-                <!-- <label for="" id="display">0+1=1</label> -->
-
                 <div id="display"></div>
-                <button onclick="reset()">C</button>
+
+                <button class="btn-reset" onclick="reset()">C</button>
                 <button onclick="borrar()">&larr;</button>
-                <button onclick="mostrarDisplay('%')">%</button>
-                <button onclick="mostrarDisplay('/')">/</button>
-                <button onclick="mostrarDisplay(7)">7</button>
-                <button onclick="mostrarDisplay(8)">8</button>
-                <button onclick="mostrarDisplay(9)">9</button>
-                <button onclick="mostrarDisplay('*')">*</button>
-                <button onclick="mostrarDisplay(4)">4</button>
-                <button onclick="mostrarDisplay(5)">5</button>
-                <button onclick="mostrarDisplay(6)">6</button>
-                <button onclick="mostrarDisplay('-')">-</button>
-                <button onclick="mostrarDisplay(1)">1</button>
-                <button onclick="mostrarDisplay(2)">2</button>
-                <button onclick="mostrarDisplay(3)">3</button>
-                <button onclick="mostrarDisplay('+')">+</button>
-                <button onclick="mostrarDisplay(0)">0</button>
-                <button onclick="mostrarDisplay('.')">.</button>
+                <button onclick="porcentaje()">%</button>
+                <button onclick="definirOperacion('dividir')">/</button>
+
+                <button onclick="agregarNumero(7)">7</button>
+                <button onclick="agregarNumero(8)">8</button>
+                <button onclick="agregarNumero(9)">9</button>
+                <button onclick="definirOperacion('multiplicar')">*</button>
+
+                <button onclick="agregarNumero(4)">4</button>
+                <button onclick="agregarNumero(5)">5</button>
+                <button onclick="agregarNumero(6)">6</button>
+                <button onclick="definirOperacion('restar')">-</button>
+
+                <button onclick="agregarNumero(1)">1</button>
+                <button onclick="agregarNumero(2)">2</button>
+                <button onclick="agregarNumero(3)">3</button>
+                <button onclick="definirOperacion('sumar')">+</button>
+
+                <button onclick="agregarNumero(0)">0</button>
+                <button onclick="agregarPunto()">.</button>
                 <button class="colum-2" onclick="calcular()">=</button>
             </div>
         </section>
 
-        <footer>Pie de pagina</footer>
+        <footer>
+            <p><strong>Desarrollado por:</strong> Dennis Trujillo</p>
+            <p><em>Octavo semestre - Cátedra de Programación Web</em></p>
+            <p>&copy; Universidad Central del Ecuador | Todos los derechos reservados</p>
+        </footer>
     </div>
+
+    <script src="../js/calculadoraFinal.js"></script>
 </body>
 
 </html>
