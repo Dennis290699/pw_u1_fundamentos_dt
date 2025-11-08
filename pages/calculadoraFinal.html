@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/calculadoraFinal.css">
+    <script src="../js/calculadoraFinal.js"></script>
+
     <title>Calculadora Final</title>
 </head>
+
 <body>
+    <div class="container">
+        <header>Calculadora</header>
 
-    <header>
+        <nav>Barra de navegacion</nav>
 
-    </header>
+        <section>
+            <div id="calculadora">
+                <!-- <label for="" id="display">0+1=1</label> -->
 
-    <nav>
+                <div id="display"></div>
+                <button onclick="reset()">C</button>
+                <button onclick="borrar()">&larr;</button>
+                <button onclick="mostrarDisplay('%')">%</button>
+                <button onclick="mostrarDisplay('/')">/</button>
+                <button onclick="mostrarDisplay(7)">7</button>
+                <button onclick="mostrarDisplay(8)">8</button>
+                <button onclick="mostrarDisplay(9)">9</button>
+                <button onclick="mostrarDisplay('*')">*</button>
+                <button onclick="mostrarDisplay(4)">4</button>
+                <button onclick="mostrarDisplay(5)">5</button>
+                <button onclick="mostrarDisplay(6)">6</button>
+                <button onclick="mostrarDisplay('-')">-</button>
+                <button onclick="mostrarDisplay(1)">1</button>
+                <button onclick="mostrarDisplay(2)">2</button>
+                <button onclick="mostrarDisplay(3)">3</button>
+                <button onclick="mostrarDisplay('+')">+</button>
+                <button onclick="mostrarDisplay(0)">0</button>
+                <button onclick="mostrarDisplay('.')">.</button>
+                <button class="colum-2" onclick="calcular()">=</button>
+            </div>
+        </section>
 
-    </nav>
-
-    <section>
-        <div class="container" id="calculadora">
-            <label for="">0+1=1</label>
-
-            <button>C</button>
-            <button>Borrar</button>
-            <button>%</button>
-            <button>/<//button>
-            <button>7</button>
-            <button>8</button>
-            <button>9</button>
-            <button>*</button>
-            <button>4</button>
-            <button>5</button>
-            <button>6</button>
-            <button>-</button>
-            <button>1</button>
-            <button>2</button>
-            <button>3</button>
-            <button>+</button>
-            <button>0</button>
-            <button>.</button>
-            <button>=</button>
-        </div>
-    </section>
-
-    <footer>
-        
-    </footer>
-    
+        <footer>Pie de pagina</footer>
+    </div>
 </body>
+
 </html>
