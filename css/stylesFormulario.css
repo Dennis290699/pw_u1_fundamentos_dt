@@ -40,9 +40,9 @@ input:focus {
 
 .formcontainer {
     background-color: #ffffff;
-    padding: 20px;
+    padding: 25px;
     border-radius: 15px;
-    width: 300px;
+    width: 320px;
     margin-top: 50px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.301);
 }
@@ -65,6 +65,21 @@ button {
 .title {
     display: flex;
     justify-content: center;
+}
+
+.msg-error {
+    background-color: #c32ce956;
+    color: red;
+    display: none;
+    border-left: 5px solid red;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.error-asterisco {
+    color: red;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 footer {
