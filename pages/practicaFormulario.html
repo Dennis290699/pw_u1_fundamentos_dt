@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/stylesPracticaFormulario.css">
+    <script src="../js/practicaFormulario.js"></script>
+
+    <title>Practica Formulario</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>Practica Formulario</h1>
+        </header>
+
+        <section>
+            <div class="container-section">
+
+                <!-- Imagen referencia -->
+                <div class="img-referencia">
+                    <img src="../assets/images/card.png" alt="">
+                </div>
+
+                <!-- Formulario -->
+                <div class="container-formulario">
+
+                    <div class="title">Payment details</div>
+
+                    <form action="" id="form-pago">
+
+                        <!-- Nombre del titular -->
+                        <div class="form-details">
+                            <label for="cardholder-name">
+                                Cardholder Name
+                                <span id="err-nombre" class="error-asterisco" style="color: red;"></span>
+                            </label>
+                            <input type="text" id="cardholder-name" placeholder="Mrs Kate Smith">
+
+                        </div>
+
+                        <!-- Número tarjeta -->
+                        <div class="form-details">
+                            <label for="card-number">
+                                Card Number
+                                <span id="err-numero" class="error-asterisco" style="color: red;"></span>
+                            </label>
+                            <input type="number" id="card-number" placeholder="1111 2222 3333 4444">
+                        </div>
+
+                        <!-- Exp date y CVV -->
+                        <div class="cardsecurity">
+
+                            <div class="form-details">
+                                <label for="exp-date">
+                                    Exp Date
+                                    <span id="err-fecha" class="error-asterisco" style="color: red;"></span>
+                                </label>
+                                <input type="date" id="exp-date">
+                            </div>
+
+                            <div class="form-details">
+                                <label for="cvv-card">
+                                    CVV
+                                    <span id="err-cvv" class="error-asterisco" style="color: red;"></span>
+                                </label>
+                                <input type="password" id="cvv-card" placeholder="123">
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <!-- Botón -->
+                    <div class="btn-confirm">
+                        <button type="button" onclick="confirmarPago()">Confirm</button>
+                    </div>
+
+                    <!-- Mensajes globales -->
+                    <div id="id-msg-error" style="display:none; color:red; margin-top:10px;"></div>
+                    <div id="id-msg-accept" style="display:none; color:green; margin-top:10px;"></div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <footer></footer>
+    </div>
+</body>
+
+</html>
